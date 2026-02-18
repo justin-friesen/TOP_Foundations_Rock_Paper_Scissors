@@ -1,16 +1,18 @@
 //Computer Logic
-function getComputerChoice(min, max) {
-    return Math.random() * (4 - 1) + 1;
-};
+function getComputerChoice() {
+    let compCh = Math.floor(Math.random() * 3);
 
-if (getComputerChoice() < 2) {
-    console.log("rock");
-} else if (getComputerChoice() < 3) {
-    console.log("paper");
-} else {
-    console.log("scissors");
+    if (compCh === 0) {
+        return "rock";
+    } else if (compCh === 1) {
+        return "paper";
+    } else {
+        return "scissors";
+    };
 };
 //End of Computer Logic
+console.log(getComputerChoice());
+
 
 //Human Logic
 function getHumanChoice() {
@@ -21,6 +23,7 @@ function getHumanChoice() {
 console.log(getHumanChoice());
 //End of Human Logic
 
+/*
 let humanScore = 0;
 let computerScore = 0;
 
@@ -62,3 +65,4 @@ function playGame() {
 
     playRound(humanSelection, computerSelection);
 }
+    */
